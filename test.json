@@ -1,0 +1,30 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Swagger test",
+        "description": "A sample API that uses a test as an example to demonstrate features in the swagger-2.0 specification",
+        "termsOfService": "http://www.google.com",
+        "contact": {
+            "name": "Wordnik API Team",
+            "email": "foo@example.com",
+            "url": "http://gradedtrust-mobile-applookup.mybluemix.net"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+        }
+    },
+    "host": "http://gradedtrust-mobile-applookup.mybluemix.net",
+    "basePath": "/v2",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        
+		"application/json"
+    ]
+}

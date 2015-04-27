@@ -16,7 +16,7 @@
         }
     },
     "host": "gradedtrustmobileapplookup.mybluemix.net",
-    "basePath": "/v2",
+    "basePath": "/appdb",
     "schemes": [
         "http"
     ],
@@ -27,7 +27,7 @@
         "application/json"
     ],
     "paths": {
-        "/appdb/Apps": {
+        "/Apps": {
             "get": {
                 "description": "Returns all detail from the API m that the user has access to",
                 "operationId": "findDetails",

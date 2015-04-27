@@ -8,14 +8,14 @@
         "contact": {
             "name": "Wordnik API Team",
             "email": "foo@example.com",
-            "url": "http://gradedtrustmobileapplookup.mybluemix.net/appdb/Apps"
+            "url": "http://gradedtrustmobileapplookup.mybluemix.net"
         },
         "license": {
             "name": "MIT",
             "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
         }
     },
-    "host": "gradedtrustmobileapplookup.mybluemix.net/appdb/Apps",
+    "host": "gradedtrustmobileapplookup.mybluemix.net",
     "basePath": "/v2",
     "schemes": [
         "http"
@@ -27,7 +27,7 @@
         "application/json"
     ],
     "paths": {
-        "/pet/findByTags": {
+        "/appdb/Apps": {
             "get": {
                 "description": "Returns all pets from the system that the user has access to",
                 "operationId": "findPets",
@@ -56,7 +56,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/pet"
+                                "$ref": "?fun=get-trust&ctxt=SampleWebApp1"
                             }
                         }
                     },
@@ -69,3 +69,5 @@
                 }
             }
 		}
+    }
+}

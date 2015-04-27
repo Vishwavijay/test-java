@@ -29,8 +29,8 @@
     "paths": {
         "/appdb/Apps": {
             "get": {
-                "description": "Returns all pets from the system that the user has access to",
-                "operationId": "findPets",
+                "description": "Returns all detail from the API m that the user has access to",
+                "operationId": "findDetails",
                 "produces": [
                     "application/json",
                     "application/xml",
@@ -52,7 +52,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "pet response",
+                        "description": "API response",
                         "schema": {
                             "type": "array",
                             "items": {

@@ -2,9 +2,9 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0.0",
-        "title": "Swagger API test",
-        "description": "A sample API that uses a test as an example to demonstrate features in the swagger-2.0 specification",
-        "termsOfService": "http://www.google.com",
+        "title": "Swagger API",
+        "description": "A sample API that uses for Bluemix as an example to demonstrate features in the swagger-2.0 specification",
+        "termsOfService": "http://helloreverb.com/terms/",
         "contact": {
             "name": "Wordnik API Team",
             "email": "foo@example.com",
@@ -15,7 +15,7 @@
             "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
         }
     },
-    "host": "http://gradedtrustmobileapplookup.mybluemix.net/appdb/Apps",
+    "host": "gradedtrustmobileapplookup.mybluemix.net/appdb/Apps",
     "basePath": "/v2",
     "schemes": [
         "http"
@@ -24,7 +24,48 @@
         "application/json"
     ],
     "produces": [
-        
-		"application/json"
-    ]
-}
+        "application/json"
+    ],
+    "paths": {
+        "/pet/findByTags": {
+            "get": {
+                "description": "Returns all pets from the system that the user has access to",
+                "operationId": "findPets",
+                "produces": [
+                    "application/json",
+                    "application/xml",
+                    "text/xml",
+                    "text/html"
+                ],
+                "parameters": [
+                    {
+                        "name": "tags",
+                        "in": "query",
+                        "description": "tags to filter by",
+                        "required": false,
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "collectionFormat": "csv"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "pet response",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/pet"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "unexpected error",
+                        "schema": {
+                            "$ref": "#/definitions/errorModel"
+                        }
+                    }
+                }
+            }
+		}
